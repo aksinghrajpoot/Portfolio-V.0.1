@@ -20,7 +20,7 @@ export default function Header() {
       <header className="relative top-0 z-50  backdrop-blur-md ">
         <div className="container flex flex-wrap items-center justify-between">
           <div className="logo flex items-center py-4">
-            <Image src="/singh.webp" height={40} width={40} />
+            <Image src="/singh.webp" alt="A K Singh" height={40} width={40} />
             <Link href="/">
               <h1 className="pl-2 text-2xl font-semibold text-primary">
                 Ashok<span className="font-extrabold">.</span>
@@ -30,23 +30,23 @@ export default function Header() {
           <nav
             className={` ${
               navOpen ? " " : "hidden "
-            }  relative order-last md:order-none w-full md:w-auto   md:block`}
+            }  relative order-last w-full md:order-none md:block   md:w-auto`}
           >
-            <ul className="absolute md:relative flex w-full md:w-auto flex-col md:flex-row  gap-2 bg-white md:bg-transparent  font-medium text-gray-700 shadow-2xl md:shadow-none ">
+            <ul className="absolute flex w-full flex-col gap-2 bg-white font-medium  text-gray-700 shadow-2xl md:relative  md:w-auto md:flex-row md:bg-transparent md:shadow-none ">
               {NavMenu.map((item) => (
-                <Link href={item.slug}>
-                  <li
-                    onClick={navToggle}
-                    key={item.title}
-                    className="cursor-pointer border-b md:border-none px-6 py-2 text-lg transition-all hover:bg-primary/80 hover:text-white/80 md:rounded-full"
-                  >
+                <li
+                  key={item.title}
+                  onClick={navToggle}
+                  className="cursor-pointer border-b px-6 py-2 text-lg transition-all hover:bg-primary/80 hover:text-white/80 md:rounded-full md:border-none"
+                >
+                  <Link key={item.title} href={item.slug}>
                     {item.title}
-                  </li>
-                </Link>
+                  </Link>
+                </li>
               ))}
             </ul>
           </nav>
-          <div className="md:hidden hmaburder" onClick={navToggle}>
+          <div className="hmaburder md:hidden" onClick={navToggle}>
             <svg viewBox="0 0 65 40" width="25" height="25">
               <rect width="65" height="5"></rect>
               <rect y="20" width="65" height="5"></rect>

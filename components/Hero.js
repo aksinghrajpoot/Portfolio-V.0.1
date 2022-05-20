@@ -6,15 +6,16 @@ export default function Hero() {
       <section className="hero">
         <div className="container py-10 md:py-28">
           <div className="absolute top-0 left-0 -z-10 flex h-full w-full overflow-clip pt-20">
-            <div class="blob absolute top-10 -left-4 h-72 w-72 rounded-full bg-teal-100 opacity-30 mix-blend-multiply blur-xl filter md:left-24"></div>
-            <div class="blob animation-delay-2000 absolute left-72 top-52 h-72 w-72 rounded-full bg-blue-200 opacity-30 mix-blend-multiply blur-xl filter md:left-[500px]"></div>
-            <div class="blob animation-delay-4000 absolute top-80 left-20 h-72 w-72 rounded-full bg-rose-300 opacity-30 mix-blend-multiply blur-xl filter"></div>
+            <div className="blob absolute top-10 -left-4 h-72 w-72 rounded-full bg-teal-100 opacity-30 mix-blend-multiply blur-xl filter md:left-24"></div>
+            <div className="blob animation-delay-2000 absolute left-72 top-52 h-72 w-72 rounded-full bg-blue-200 opacity-30 mix-blend-multiply blur-xl filter md:left-[500px]"></div>
+            <div className="blob animation-delay-4000 absolute top-80 left-20 h-72 w-72 rounded-full bg-rose-300 opacity-30 mix-blend-multiply blur-xl filter"></div>
           </div>
 
           <div className="flex shrink-0 flex-col md:flex-row">
             <div className="mx-auto md:order-2">
               <Image
                 src="/singh.webp"
+                alt="singh"
                 width={160}
                 height={160}
                 layout="fixed"
